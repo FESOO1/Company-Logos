@@ -113,7 +113,7 @@ function displaySearchedLogos() {
 
             for (let i = 0; i < favoriteButtons.length; i++) {
                 favoriteButtons[i].addEventListener('click', () => {
-
+                    
                     output.parentNode.removeChild(output);
                     // REMOVING THE CLASS FROM THE CLICKED BUTTON
                     favoriteButtons[i].classList.remove('company-logo-output-itself-favorite-button-saved');

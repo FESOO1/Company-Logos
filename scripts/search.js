@@ -34,7 +34,6 @@ async function displayLogos(e) {
                 <h2 class="company-logo-output-itself-text-itself">${logoData[0].name}</h2>
                 <a href="https://${logoData[0].domain}" target="_blank" class="company-logo-output-itself-text-itself-link">${logoData[0].domain}</a>
             </div>
-            <button type="button" class="company-logo-output-itself-copy-icon-url">COPY ICON URL</button>
         `;
         searchOutputThemselves.appendChild(output);
 
@@ -47,7 +46,6 @@ async function displayLogos(e) {
 
     // HANDLING THE SAVE AS FAVORITE BUTTON
     const favoriteButtons = document.querySelectorAll('.company-logo-output-itself-favorite-button');
-    const copyIconUrlButtons = document.querySelectorAll('.company-logo-output-itself-copy-icon-url');
 
     for (let i = 0; i < favoriteButtons.length; i++) {
         // FAVORITE BUTTONS
@@ -65,17 +63,6 @@ async function displayLogos(e) {
             localStorage.setItem('logosNameArrayLS', JSON.stringify(logosNameArray));
             localStorage.setItem('logosDomainArrayLS', JSON.stringify(logosDomainArray));
             localStorage.setItem('logosIconArrayLS', JSON.stringify(logosIconArray));
-        });
-
-        // COPY URL BUTTONS
-        copyIconUrlButtons[i].addEventListener('click', () => {
-            navigator.clipboard.writeText(logosIconArray[i]);
-            copyIconUrlButtons[i].textContent = 'ICON URL COPIED';
-
-            // CHANGING THE TEXT BACK TO ITS FORM
-            setTimeout(() => {
-                copyIconUrlButtons[i].textContent = 'COPY ICON URL';
-            }, 3000);
         });
     };
 };

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --f-poppins: "Poppins", serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--f-poppins);
+}
+
+body {
+    background-color: rgb(20,20,20);
+}
+
+/* COMPANY LOGOS */
+
+.company-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 40px;
+    row-gap: 60px;
+}
+
+/* COMPANY LOGOS INPUT */
+
+.company-logos-input {
+    width: 400px;
+    height: 45px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    background-color: rgb(30,30,30);
+    border-radius: 0.2rem;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.company-logos-input:focus-within {
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* COMPANY LOGOS INPUT ITSELF */
+
+.company-logos-input-itself {
+    padding-inline: 15px;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.company-logos-input-button {
+    padding-inline: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(40,40,40);
+    border: 0;
+    border-left: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer;
+    outline: none;
+}
+
+.company-logos-input-button-svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.company-logos-input-button:focus {
+    border: 1px solid white;
+}
+
+.company-logos-input-button:hover {
+    background-color: rgb(50,50,50);
+}
+
+.company-logos-input-button:active {
+    background-color: rgb(45,45,45);
+}
+
+/*
+
+    COMPANY LOGOS OUTPUT
+
+*/
+
+.company-logos-output {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+/* COMPANY LOGO OUTPUT ITSELF */
+
+.company-logo-output-itself {
+    padding: 5px;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    border-radius: 0.5rem;
+    background-color: rgb(30,30,30);
+    position: relative;
+}
+
+.company-logo-output-itself-favorite-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.company-logo-output-itself-favorite-button-saved .company-logo-output-itself-favorite-button-svg {
+    fill: white;
+}
+
+.company-logo-output-itself-favorite-button-svg {
+    color: white;
+}
+
+.company-logo-output-itself-image {
+    line-height: 0;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.company-logo-output-itself-image-itself {
+    width: 100%;
+}
+
+.company-logo-output-itself-text {
+    background-color: rgb(15,15,15);
+    border-radius: 0.2rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 5px 10px;
+}
+
+.company-logo-output-itself-text-itself {
+    color: white;
+    font-weight: 400;
+}
+
+.company-logo-output-itself-text-itself-link {
+    color: white;
+    text-decoration-thickness: 1px;
+}
+
+.company-logo-output-itself-text-itself-link:hover {
+    color: rgb(200,200,200);
+}
+
+/* COMPANY LOGO OUTPUT ITSELF COPY ICON URL */
+
+.company-logo-output-itself-copy-icon-url {
+    border: 0.2rem;
+    height: 40px;
+    border-radius: 0.2rem;
+    background-color: rgb(45,45,45);
+    color: white;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+    cursor: pointer;
+}
+
+.company-logo-output-itself-copy-icon-url:hover {
+    background-color: rgb(55,55,55);
+}
+
+.company-logo-output-itself-copy-icon-url:active {
+    background-color: rgb(50,50,50);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 450px) {
+    .company-logos-input {
+        width: 100%;
+    }
+    .company-logos {
+        padding-inline: 20px;
+        row-gap: 20px;
+    }
+    .company-logos-output {
+        padding-inline: 0;
+    }
+}

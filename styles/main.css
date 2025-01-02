@@ -100,6 +100,7 @@ body {
 /* COMPANY LOGO OUTPUT ITSELF */
 
 .company-logo-output-itself {
+    height: max-content;
     padding: 5px;
     border: 1px solid rgba(255,255,255,0.08);
     display: flex;
